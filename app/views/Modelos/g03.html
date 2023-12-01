@@ -1,0 +1,69 @@
+    #{extends 'main.html' /}
+    #{set title:'Formulário de Cadastro' /}
+
+    <div class="formulario" style="background-color: #66CDAA; width: 20%;
+                            border: 2px solid rgba(255, 255, 255, .2);
+                            color: white;
+                            border-radius: 10px;
+                            padding: 30px 40px;">
+
+        <p class="lead mt-4">
+	        Formulário do grupo ${grupo}
+        </p>
+
+
+        <p>
+	        <small>Desenvolva aqui o seu formulário de cadastro.</small>
+        </p>
+
+        <form action="/salvar">
+	        <input type="hidden" name="grupo" value=${grupo} />
+
+            <h3>Clinica de reabilitação - Santa Casa</h3>
+            
+            <p>
+                <label for="nome">Nome do paciente:</label>
+                <input type="text" name="nome" id="nome"/>
+            </p>
+
+            <p>
+                <label for="descricao">Descrição do paciente:</label>
+                <input type="text" name="descricao" id="descricao"/>
+            </p>
+
+            <p>
+                <label for="numero">Número para contanto:</label>
+                <input type="number" name="numero" id="numero"/>
+            </p>
+
+            <p>
+                <label for="tipo">Selecione uma opção:</label>
+                <select name="tipo" id="tipo">
+                    <option selected>--- Selecione ---</option>
+                    <option>Transtorno de Personalidade Bordeline</option>
+                    <option>Transtorno Afetivo Bipolar</option>
+                    <option>Transtorno Dissociativo de Identidade</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="">Selecione o local do primeiro "surto" psicótico:</label>
+                <br/>
+                <input type="checkbox" name="opcoes"/> Surtou na escola
+                <br/>
+                <input type="checkbox" name="opcoes" /> Surtou em casa/hotel
+                <br/>
+                <input type="checkbox" name="opcoes" /> Surtou no trabalho
+            </p>
+
+            <p>
+                <label for="data">Selecione a data da internação:</label>
+                <input type="date" name="data" id="data"/> 
+            </p>
+
+            <input type="button" value="Cadastrar">
+        </form>
+    </div>
+
+    <br/>
+</form>
