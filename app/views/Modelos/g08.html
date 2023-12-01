@@ -10,16 +10,14 @@
 	<small>Desenvolva aqui o seu formulário de cadastro.</small>
 </p>
 
-<form action="http://[ip-fornecido-pelo-professor]:9000/salvar">
+<form action="/salvar">
 	<input type="hidden" name="grupo" value=${grupo} />
 	
 	<table style="border: 1px solid black; background-color: rgb(151, 152, 153);" >
 		<tr>
 			<td>
 				<label for="">Nome:</label>
-				
 			</td>
-			
 			<td>
 				<input type="text" name="nome" required >
 			</td>
@@ -29,8 +27,7 @@
 				<label for="">Data de Nascimento:</label>
 			</td>
 			<td>
-				
-				<input type="date" name="" id="">
+				<input type="date" name="data" required>
 			</td>
 		</tr>
 		<tr>
@@ -38,16 +35,15 @@
 				<label for="">Matricula</label>
 			</td>
 			<td>
-				<input type="text">
+				<input type="text" name="Matricula">
 			</td>
-			
 		</tr>
 		<tr>
 			<td>
 				<label for="">Periodo:</label>
 			</td>
 			<td>
-				<input type="number" name="" id="">
+				<input type="number" name="periodo">
 			</td>
 		</tr>
 		<tr>
@@ -55,55 +51,46 @@
 				<label for="">Curso:</label>
 			</td>
 			<td>
-				<select name="" id="">
-				<option value="1">Selecione</option>
-				<option value="2">informatica</option>
-				<option value="3">Eletrotecnica</option>
-				<option value="4">Administração</option>
+				<select name="curso">
+					<option value="nulo">Selecione</option>
+					<option value="INFO">informatica</option>
+					<option value="ELETRO">Eletrotecnica</option>
+					<option value="ADM">Administração</option>
 				</select>
 			</td>
-			
 		</tr>
-		<tr >
-			<td >
+		<tr>
+			<td>
 				<label for="">Materias favoritas:</label>
 			</td>
-			
-		</tr>
-		<tr>
-			<td >
-				<input type="checkbox" name="" id="">Português
-				
-
-			</td>
-			<td>
-				<input type="checkbox" name="" id="">Matemática
-				
-			</td>
-			
 		</tr>
 		<tr>
 			<td>
-				<input type="checkbox" name="" id="">Historia
-				
-				
+				<input type="checkbox" name="portugues">Português
 			</td>
 			<td>
-				<input type="checkbox" name="" id="">geografia
-				
+				<input type="checkbox" name="matematica">Matemática
 			</td>
 		</tr>
-		<tr><td>
-			<input type="checkbox" name="" id="">Sociologia
-			
-		</td>
-		<td>
-			<input type="checkbox" name="" id="">Biologia
-			
-			
-		</td>
-	</tr>
-		
-		
+		<tr>
+			<td>
+				<input type="checkbox" name="historia">Historia
+			</td>
+			<td>
+				<input type="checkbox" name="geografia">geografia
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" name="Sociologia">Sociologia
+			</td>
+			<td>
+				<input type="checkbox" name="biologia">Biologia
+			</td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Enviar"></td>
+			<td><input type="reset" value="Limpar"></td>
+		</tr>
 	</table>
 </form>
