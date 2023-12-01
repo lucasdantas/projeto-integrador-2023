@@ -1,7 +1,8 @@
     #{extends 'main.html' /}
     #{set title:'Formulário de Cadastro' /}
 
-
+    <input type="hidden" name="grupo" value=${grupo} />
+    
     <div class="container">
     <div class="formulario">
 
@@ -15,7 +16,6 @@
         </p>
 
         <form action="/salvar">
-	        <input type="hidden" name="grupo" value=${grupo} />
 
             <h3>Clinica de reabilitação - Santa Casa</h3>
             
@@ -30,7 +30,7 @@
             </p>
 
             <p>
-                <label for="numero">Número para contanto:</label>
+                <label for="numero">Número do paciente:</label>
                 <input type="number" name="numero" id="numero"/>
             </p>
 
