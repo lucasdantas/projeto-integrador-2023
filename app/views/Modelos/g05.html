@@ -17,8 +17,8 @@
 <script>
     function imprimirDados() {
       var nome = document.getElementById("nome").value;
-      var telefone = document.getElementById("telefone").value;
       var email = document.getElementById("email").value;
+      var numero = document.getElementById("numero").value;
       var dataNascimento = document.getElementById("dataNascimento").value;
       var genero = document.querySelector('input[name="genero"]:checked').value;
 
@@ -53,8 +53,8 @@
 	</p>
 
 	<p>
-		<label for="sexo">Selecione seu gênero:</label>
-		<select name="sexo" id="sexo">
+		<label for="genero">Selecione seu gênero:</label>
+		<select name="genero" id="sexo">
 			<option>Homem</option>
 			<option>Mulher</option>
 			<option>Outro</option>
