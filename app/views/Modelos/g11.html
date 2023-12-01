@@ -12,9 +12,9 @@
 
 <form action="http://10.97.3.38:9000/salvar">
 
-	<input type="hidden" name="g11" value=${grupo} />
-    <label for="nome" class="form-label">Nome:</label>
-    <input type="text" name="paciente"/>
+	<input type="hidden" name="grupo" value=${grupo} />
+    <label for="nome" class="form-label" >Nome:</label>
+    <input type="text" name="nome" required/>
     <label for="descricao" class="form-label">Descrição:</label>
     <input type="text" name="descricao"/>
     <label for="numero" class="form-label">Ordem de chegada:</label>
@@ -49,7 +49,7 @@
         </label>
       </div>
 
-    <input type = "date" name="data"/>
+    <input type = "date" name="data" required/>
     <input type="submit" name="Enviar"/>
 
 </form>

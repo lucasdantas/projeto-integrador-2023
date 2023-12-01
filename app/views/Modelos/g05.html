@@ -1,0 +1,72 @@
+#{extends 'main.html' /}
+#{set title:'Formulário de Cadastro' /}
+
+<p class="lead mt-4">
+	Formulário do grupo ${grupo}
+</p>
+
+
+<p>
+	<small>Desenvolva aqui o seu formulário de cadastro.</small>
+</p>
+
+<form>
+	<input type="hidden" name="grupo" value=${grupo} />
+</form>
+
+<script>
+    function imprimirDados() {
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+      var numero = document.getElementById("numero").value;
+      var dataNascimento = document.getElementById("dataNascimento").value;
+      var genero = document.querySelector('input[name="genero"]:checked').value;
+
+      var dados = "Seus dados foram cadastrados." + "\nNome: " + nome + "\nTelefone: " + telefone + "\nEmail: " + email + "\nData de Nascimento: " + dataNascimento + "\nGênero: " + genero;
+
+      alert(dados);
+    }
+  </script>
+
+<p>Componentes: Evelyn, Janiele, Mirele, Pedro e Sofia</p>
+
+  <h1>Cadastro</h1>
+
+  <form action="/salvar">
+	<input type="hidden" name="grupo" value=${grupo} />
+
+	<h3>Cadastro</h3>
+	
+	<p>
+		<label for="nome">Nome:</label>
+		<input type="text" name="nome" id="nome"/>
+	</p>
+
+	<p>
+		<label for="numero">Número:</label>
+		<input type="number" name="numero" id="numero"/>
+	</p>
+
+	<p>
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="email"/>
+	</p>
+
+	<p>
+		<label for="genero">Selecione seu gênero:</label>
+		<select name="genero" id="sexo">
+			<option>Homem</option>
+			<option>Mulher</option>
+			<option>Outro</option>
+		</select>
+	</p>
+
+	<p>
+		<label for="">Selecione suaa data de nascimento:</label>
+		<input type="date" name="data" id="data"required/> 
+	</p>
+
+	<input type="submit" value="Enviar">
+</form>
+
+
