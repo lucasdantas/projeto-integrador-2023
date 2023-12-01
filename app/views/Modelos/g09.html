@@ -1,0 +1,35 @@
+
+
+<p class="lead mt-4">
+	Formulário do grupo g09
+</p>
+
+
+<p>
+	<small>Desenvolva aqui o seu formulário de cadastro.</small>
+</p>
+
+<form action="/salvar">
+	<h3>Cadastre-se</h3>
+
+        <label for="name">Nome:</label>    
+        <input type="name" name="nome" required/>
+      
+        <label for="email">E-mail:</label>
+		<input type="email" name="email" required />
+
+        <label for="password">Senha:</label>
+		<input type="password" name="senha" required/>
+        
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" required>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo required">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+
+            <button type="submit">Cadastrar</button>
+</form>
