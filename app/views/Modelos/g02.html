@@ -10,7 +10,8 @@
 	<small>Desenvolva aqui o seu formulário de cadastro.</small>
 </p>
 
-<form class="row g-3" action="/salvar">
+<form action="/salvar">
+  <input type="hidden" name="grupo" value=${grupo} />
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Email</label>
     <input type="email" class="form-control" id="inputEmail4">
@@ -51,7 +52,7 @@
     </div>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Entrar</button>
+    <button type="submit" class="btn btn-primary">Salvar</button>
 
   </div>
 </form>
