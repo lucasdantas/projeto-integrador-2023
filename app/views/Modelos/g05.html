@@ -17,15 +17,14 @@
 <script>
     function imprimirDados() {
       var nome = document.getElementById("nome").value;
-      var email = document.getElementById("email").value;
       var numero = document.getElementById("numero").value;
       var dataNascimento = document.getElementById("dataNascimento").value;
 	  var grupo = document.getElementById("grupo").value;
 	  var descricao = document.getElementById("descricao").value;
-	  var tipo = document.getElementById("tipo").value;
+	  var tipo = document.querySelector('input[name="sangue"]:checked').value;
       var genero = document.querySelector('input[name="genero"]:checked').value;
 
-      var dados = "Seus dados foram cadastrados." + "\nNome: " + nome + "\nNúmero: " + numero + "\nEmail: " + email + "\nData de Nascimento: " + dataNascimento + "\nGênero: " + genero + "\nGrupo: " grupo + "\nDescricao: " descricao + "\nTipo: " tipo;
+      var dados = "Seus dados foram cadastrados." + "\nNome: " + nome + "\nNúmero: " + numero + "\nData de Nascimento: " + dataNascimento + "\nGênero: " + genero + "\nGrupo: " + grupo + "\nDescricao: "+ descricao + "\nTipo: "+ tipo;
 
       alert(dados);
     }
@@ -58,21 +57,24 @@
 
 	<p>
 		<label for="tipo">Tipo sanguíneo:</label>
-		<input type="text" name="tipo" id="tipo"/>
-	</p>
-
-	<p>
-		<label for="email">Email:</label>
-		<input type="email" name="email" id="email"/>
+		<select name="tipo" id="sangue">
+			<option>A</option>
+			<option>B</option>
+			<option>AB</option>
+			<option>O</option>
+		</select>
 	</p>
 
 	<p>
 		<label for="genero">Opções de gênero:</label>
-		<select name="genero" id="sexo">
-			<option>Homem</option>
-			<option>Mulher</option>
-			<option>Outro</option>
-		</select>
+		<input type="checkbox" id="genero" autocomplete="off">
+        <label for="genero">Homem</label>
+
+        <input type="checkbox" id="genero" autocomplete="off">
+		<label for="genero">Mulher</label>
+
+        <input type="checkbox" id="genero" autocomplete="off">
+        <label for="genero">Outro</label>	
 	</p>
 
 	<p>
