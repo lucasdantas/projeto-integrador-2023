@@ -2,66 +2,23 @@
 <html lang="en">
 
 <head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    /* Estilos para o formulário */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 20px;
-    }
-
-    /* Estilos para os campos de entrada de texto */
-    input[type="text"],
-    input[type="date"],
-    input[type="radio"],
-    input[type="checkbox"],
-    textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-    /* Estilos para os rótulos */
-    .form-label {
-        font-weight: bold;
-    }
-
-    /* Estilos para os botões */
-    .btn-primary {
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .btn-primary:hover {
-        background-color: #0056b3;
-    }
-
-    /* Estilos para os checkboxes */
-    .form-check-input[type="checkbox"] {
-        margin-top: 4px;
-    }
-
-    /* Estilos para o layout responsivo */
-    @media (max-width: 768px) {
-        .col-md-6 {
-            width: 100%;
-        }
-    }
-</style>
 
 <body>
     <form action="/salvar" class="row g-3">
@@ -74,23 +31,23 @@
 
         <div class="col-12">
             <label for="inputendereço" class="form-label">Endereço</label>
-            <input type="text" name="endereço" id="inputendereço" placeholder="Rua, bairro, cep">
+            <input type="text" name="tipo" id="inputendereço" placeholder="Rua, bairro, cep">
         </div>
         <div class="col-12">
-            <label for="inputcpf" class="form-label">CPF</label>
-            <input type="text" name="numero" id="inputcpf" placeholder="123.456.789-10">
+            <label for="inputemail" class="form-label">Email</label>
+            <input type="text" name="descricao" id="inputemail">
         </div>
         <div class="col-md-6">
             <label for="inputraça" class="form-label">Raça</label>
-            <input type="text"  name="raça" id="inputraça">
+            <input type="text" name="raça" id="inputraça">
         </div>
         <div>
             <label for="genero">Selecione seu gênero:</label><br>
-            <input type="radio" id="masculino" name="genero" value="masculino">
+            <input type="radio" id="masculino" name="opcoes" value="masculino">
             <label for="masculino">Masculino</label><br>
-            <input type="radio" id="feminino" name="genero" value="feminino">
+            <input type="radio" id="feminino" name="opcoes" value="feminino">
             <label for="feminino">Feminino</label><br>
-            <input type="radio" id="outro" name="genero" value="outro">
+            <input type="radio" id="outro" name="opcoes" value="outro">
             <label for="outro">Outro</label><br>
         </div>
         <div class="col-md-6">
