@@ -25,7 +25,7 @@ public class Modelos extends Controller {
 	}
 	
 	public static void salvar(String grupo, String nome, String descricao, 
-			Double numero, String tipo, List<String> opcoes, Date data) {
+			Double numero, String tipo, List<String> opcoes, String data) {
 		
 		Modelo modelo = new Modelo();
 		modelo.grupo = grupo.toLowerCase();
