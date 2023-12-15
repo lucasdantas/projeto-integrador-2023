@@ -1,4 +1,5 @@
-
+#{extends 'main.html' /}
+#{set title:'Formulário de Cadastro' /}
 
 <p class="lead mt-4">
 	Formulário do grupo g09
@@ -15,21 +16,21 @@
 
 	<!--modificação g09-->
 
-        <label for="name">Nome:</label>    
-        <input type="text" name="nome" required/>
-      
-        <label for="email">E-mail:</label>
-		<input type="email" name="descricao" required />
+    <label>Nome:</label>    
+    <input type="text" name="nome" required/>
+    
+    <label>E-mail:</label>
+    <input type="email" name="descricao" required />
 
-        <label for="password">Senha:</label>
-		<input type="password" name="numero" required/>
+    <label>Senha:</label>
+    <input type="password" name="numero" required/>
 
-        <label for="sexo">Sexo:</label>
-        <select id="sexo" name="tipo" required>
-            <option value="masculino">Masculino</option>
-            <option value="feminino">Feminino</option>
-            <option value="outro">Outro</option>
-        </select>
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="tipo" required>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+    </select>
 
-            <button type="submit">Cadastrar</button>
+    <input type="submit" />
 </form>
