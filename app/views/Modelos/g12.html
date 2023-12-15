@@ -1,50 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Cadastro</title>
-    <style>
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
+#{extends 'main.html' /}
+#{set title:'Formulário de Cadastro' /}
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <form action="/Salvar">
     
-    <input type="hidden" id="grupo" name="grupo" value="grupo01">
+    <input type="hidden" id="grupo" name="grupo" value=${grupo}>
 
     
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
+    <div class="form-group">
+    <label for="exampleFormControlInput1">Nome</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1">
+    </div>
 
     
-    <label for="descricao">Descrição:</label>
-    <textarea id="descricao" name="descricao" required></textarea>
+    <div class="form-group">
+    <label for="exampleFormControlTextarea1">Descrição</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
 
-    
-    <label for="numero">Número:</label>
-    <input type="number" id="numero" name="numero" required>
+    <div class="form-group">
+        <label for="exampleFormControlSelect2">Informe sua idade</label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+          <option>Entre 10 e 30</option>
+          <option>Entre 30 e 50</option>
+          <option>Entre 50 e 100</option>
+        </select>
+      </div>
 
-    
     <label for="tipo">Tipo:</label>
-    <select id="tipo" name="tipo" required>
-        <option value="Magro">Magro</option>
-        <option value="Normal">Normal</option>
-        <option value="Sobrepeso">Sobrepeso</option>
-        <option value="Obeso">Obeso</option>
+    <select class="form-control">
+    <option>Magro</option>
+    <option>Normal</option>
+    <option>Sobrepeso</option>
+    <option>Obeso</option>
     </select>
 
     
-    <label>Opções:</label>
-    <input type="checkbox" id="alergia" name="opcoes" value="Alergia"> Alergia
-    <input type="checkbox" id="problemaCardiaco" name="opcoes" value="Problema Cardíaco"> Problema Cardíaco
-    <input type="checkbox" id="problemaRespiratorio" name="opcoes" value="Problema Respiratório"> Problema Respiratório
-    <input type="checkbox" id="alopecia" name="opcoes" value="Alopecia"> Alopecia
-
+    <label>Possui alguma dessas doenças:</label>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
+        <label class="form-check-label" for="inlineCheckbox1">Problemas cardíacos</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+        <label class="form-check-label" for="inlineCheckbox2">Diabetes</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3">
+        <label class="form-check-label" for="inlineCheckbox3">Anemia</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3">
+        <label class="form-check-label" for="inlineCheckbox3">Nenhuma das opções</label>
+    </div>
     
     <label for="data">Data:</label>
     <input type="date" id="data" name="data" required>
@@ -55,7 +63,9 @@
 
 <script>
     function submitForm() {
-        
+         
+        alert ("Parabéns, formulário respondido com sucesso!");
+
         var formData = new FormData(document.getElementById('cadastroForm'));
 
 

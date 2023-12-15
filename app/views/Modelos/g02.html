@@ -12,37 +12,51 @@
 
 <form action="/salvar">
   <input type="hidden" name="grupo" value=${grupo} />
+
   <div class="col-md-6">
-    <label for="inputgrupo4" class="form-label">grupo</label>
-    <input type="grupo" class="form-control" id="inputgrupo4">
+    <label for="inputname" class="form-label">Nome:</label>
+    <input type="text" name="nome" class="form-control" id="inputname">
   </div>
+
+  <div class="col-6">
+    <label for="inputAddress" class="form-label">Descrição</label>
+    <input type="text" name = "descricao"class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+
+  <div class="col-6">
+    <label for="inputnumero2" class="form-label">Número</label>
+    <input type="number" name = "numero"class="form-control" id="inputnumero2">
+  </div>
+
+  <label for="inputnumero2" class="form-label">Tipo</label>
   <div class="col-md-6">
-    <label for="inputname" class="form-label">nome</label>
-    <input type="name" class="form-control" id="inputname">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">descricao</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="col-12">
-    <label for="inputnumero2" class="form-label">numero</label>
-    <input type="text" class="form-control" id="inputnumero2">
-  </div>
-  <div class="col-md-6">
-    <label for="inputtipo" class="form-label">tipo</label>
-    <input type="text" class="form-control" id="inputtipo">
-  </div>
-  <div class="col-md-4">
-    <label for="inputopcoes" class="form-label">opções</label>
-    <select id="inputopcoe" class="form-select">
-      <option selected>Selecione...</option>
-      <option>projeto integrador</option>
+    <select class="form-select" id="floatingSelect" name="tipo" aria-label="Floating label select example">
+
+      <option selected>Selecione</option>
+      <option value="1">PI</option>
+      <option value="2">BD</option>
+      <option value="3">AW</option>
     </select>
   </div>
-  <div class="col-md-2">
-    <label for="inputdata" class="form-label">data</label>
-    <input type="text" class="form-control" id="inputdata">
+
+  <label for="inputnumero2" class="form-label">Opções</label>
+  
+  <div class="col-md-4">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" name="opcoes" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Opção 1
+        </label>
+      </div>
   </div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" name="opcoes"id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+   Opção 2
+  </label>
+</div>
+  
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck">
