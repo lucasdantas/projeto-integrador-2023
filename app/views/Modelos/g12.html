@@ -9,18 +9,18 @@
     
     <div class="form-group">
     <label for="exampleFormControlInput1">Nome</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1">
+    <input type="email" class="form-control" id="exampleFormControlInput1" name="name">
     </div>
 
     
-    <div class="form-group">
+    <div class="form-group col-md-12">
     <label for="exampleFormControlTextarea1">Descrição</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="descricao" rows="3"></textarea>
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-md-12">
         <label for="exampleFormControlSelect2">Informe sua idade</label>
-        <select multiple class="form-control" id="exampleFormControlSelect2">
+        <select multiple class="form-control" id="exampleFormControlSelect2" name="info">
           <option>Entre 10 e 30</option>
           <option>Entre 30 e 50</option>
           <option>Entre 50 e 100</option>
@@ -37,20 +37,20 @@
 
     
     <label>Possui alguma dessas doenças:</label>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
+    <div class="form-group col-md-12">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="PB" value="opcao1">
         <label class="form-check-label" for="inlineCheckbox1">Problemas cardíacos</label>
     </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+    <div class="form-group col-md-12">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="D" value="opcao2">
         <label class="form-check-label" for="inlineCheckbox2">Diabetes</label>
     </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3">
+    <div class="form-group col-md-12">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="A" value="opcao3">
         <label class="form-check-label" for="inlineCheckbox3">Anemia</label>
     </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3">
+    <div class="form-group col-md-12">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="N" value="opcao3">
         <label class="form-check-label" for="inlineCheckbox3">Nenhuma das opções</label>
     </div>
     
@@ -63,8 +63,6 @@
 
 <script>
     function submitForm() {
-         
-        alert ("Parabéns, formulário respondido com sucesso!");
 
         var formData = new FormData(document.getElementById('cadastroForm'));
 
