@@ -1,96 +1,67 @@
 #{extends 'main.html' /}
 #{set title:'Formulário de Cadastro' /}
 
-<p class="lead mt-4">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<p class="lead mt-4" style="text-align: center;">
 	Formulário do grupo g08
 </p>
 
 
-<p>
+<p style="text-align: center;">
 	<small>Desenvolva aqui o seu formulário de cadastro.</small>
 </p>
 
-<form action="/salvar">
-	<input type="hidden" name="grupo" value=${grupo} />
-	
-	<table style="border: 1px solid black; background-color: rgb(151, 152, 153);" >
-		<tr>
-			<td>
-				<label for="">Nome:</label>
-			</td>
-			<td>
-				<input type="text" name="nome" required >
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label for="">descrição:</label>
-			</td>
-			<td>
-				<input type="text" name="descricao" required>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label for="">numero:</label>
-			</td>
-			<td>
-				<input type="number" name="numero">
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label for="">Curso:</label>
-			</td>
-			<td>
-				<select name="tipo">
-					<option value="nulo">Selecione</option>
-					<option value="INFO">informatica</option>
-					<option value="ELETRO">Eletrotecnica</option>
-					<option value="ADM">Administração</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label for="">Materias favoritas:</label>
-			</td>
-		</tr>
-		<tr>
-			<td>
+<form action="/salvar" style="display: flex; justify-content: center; align-items: center;">
+
+	<div id="principal" style=" width: 50%;">
+		<input type="hidden" name="grupo" value=${grupo} />
+		<div class="form-row">
+			<div class="form-group col-md-12">
+			  <label for="input1">Nome</label>
+			  <input type="text" class="form-control" id="input1" name="nome" placeholder="Digite seu nome:">
+			</div>
+		  </div>
+		  <div class="form-group">
+			<label for="input2">Descrição</label>
+			<input type="text" class="form-control" id="input2" name="descricao" placeholder="Informe uma descrição">
+		  </div>
+		  <div class="form-group">
+			<label for="input3">Número</label>
+			<input type="number" class="form-control" id="input3" name="numero" placeholder="informe o Número">
+		  </div>
+		  <div class="form-row">
+			<div class="form-group col-md-12">
+			  <label for="input4">Curso</label>
+			  <select id="input4" class="form-control">
+				<option value="nulo" name="tipo" >Selecione</option>
+				<option value="INFO" name="tipo">informatica</option>
+				<option value="ELETRO" name="tipo">Eletrotecnica</option>
+				<option value="ADM" name="tipo">Administração</option>
+			  </select>
+			</div>
+		  </div>
+		  <div class="form-row">
+			<div class="form-group col-md-12">
+				<label>Matérias favoritas</label> <br>
 				<input type="checkbox" name="opcoes" value="portugues">Português
-			</td>
-			<td>
-				<input type="checkbox" name="opcoes" value="matematica">Matemática
-			</td>
-		</tr>
-		<tr>
-			<td>
+				<input type="checkbox" name="opcoes" value="matematica">Matemática <br>
 				<input type="checkbox" name="opcoes" value="historia">Historia
-			</td>
-			<td>
-				<input type="checkbox" name="opcoes"  value="geografia">geografia
-			</td>
-		</tr>
-		<tr>
-			<td>
+				<input type="checkbox" name="opcoes"  value="geografia">geografia <br>
 				<input type="checkbox" name="opcoes" value="Sociologia">Sociologia
-			</td>
-			<td>
 				<input type="checkbox" name="opcoes" value="biologia">Biologia
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label for="">Data:</label>
-			</td>
-			<td>
-				<input type="text" name="data">
-			</td>
-		</tr>
-		<tr>
-			<td><input type="submit" value="Enviar"></td>
-			<td><input type="reset" value="Limpar"></td>
-		</tr>
-	</table>
+		
+			</div>
+		  </div>
+		  <div class="form-row">
+			<div class="form-group col-md-12">
+			  <label for="input5">Data de Nascimento</label>
+			  <input type="text" class="form-control" id="input5" name="data" placeholder="Digite a data:">
+			</div>
+		  </div>
+		  <button type="submit" class="btn btn-primary">Entrar</button>
+		  <button type="reset" class="btn btn-primary">Limpar</button>
+		
+	</div>
+
 </form>
