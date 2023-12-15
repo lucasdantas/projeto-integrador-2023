@@ -20,25 +20,35 @@
       var email = document.getElementById("email").value;
       var numero = document.getElementById("numero").value;
       var dataNascimento = document.getElementById("dataNascimento").value;
+	  var grupo = document.getElementById("grupo").value;
+	  var descricao = document.getElementById("descricao").value;
+	  var tipo = document.getElementById("tipo").value;
       var genero = document.querySelector('input[name="genero"]:checked').value;
 
-      var dados = "Seus dados foram cadastrados." + "\nNome: " + nome + "\nTelefone: " + telefone + "\nEmail: " + email + "\nData de Nascimento: " + dataNascimento + "\nGênero: " + genero;
+      var dados = "Seus dados foram cadastrados." + "\nNome: " + nome + "\nNúmero: " + numero + "\nEmail: " + email + "\nData de Nascimento: " + dataNascimento + "\nGênero: " + genero + "\nGrupo: " grupo + "\nDescricao: " descricao + "\nTipo: " tipo;
 
       alert(dados);
     }
   </script>
-
-<p>Componentes: Evelyn, Janiele, Mirele, Pedro e Sofia</p>
 
   <h1>Cadastro</h1>
 
   <form action="/salvar">
 	<input type="hidden" name="grupo" value=${grupo} />
 
-	
+	<p>
+		<label for="grupo">Grupo:</label>
+		<input type="text" name="grupo" id="grupo"/>
+	</p>
+
 	<p>
 		<label for="nome">Nome:</label>
 		<input type="text" name="nome" id="nome"/>
+	</p>
+
+	<p>
+		<label for="descricao">Descricao de curso:</label>
+		<input type="text" name="descricao" id="descricao"/>
 	</p>
 
 	<p>
@@ -47,12 +57,17 @@
 	</p>
 
 	<p>
+		<label for="tipo">Tipo sanguíneo:</label>
+		<input type="text" name="tipo" id="tipo"/>
+	</p>
+
+	<p>
 		<label for="email">Email:</label>
 		<input type="email" name="email" id="email"/>
 	</p>
 
 	<p>
-		<label for="genero">Selecione seu gênero:</label>
+		<label for="genero">Opções de gênero:</label>
 		<select name="genero" id="sexo">
 			<option>Homem</option>
 			<option>Mulher</option>
