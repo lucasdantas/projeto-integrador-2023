@@ -5,10 +5,14 @@
 	Formulário do grupo 11
 </p>
 
+<!-- Grupo composto por: Darlane Ribeiro, Alanna Fernandes, Raquel Souza e João Arthur-->
 
 <p>
-	<small>Formulário de consulta nutricional:</small>
+	<h1>Consulta nutricional:</h1>
+  <small>Informe seus dados abaixo:</small>
 </p>
+
+<title>Consulta Nutricional - Grupo 11</title>
 
 <form action="http://10.97.3.38:9000/salvar">
 
@@ -19,8 +23,8 @@
     <input type="text" name="descricao"/>
     <label for="numero" class="form-label">Ordem de chegada:</label>
     <input type="number" name="numero"/>
-    
-    <select class="form-select" aria-label="Default select example">
+ 
+    <select name = "select" class="form-select" aria-label="Default select example">
         <option selected>Selecione o peso:</option>
         <option value="1">Magro</option>
         <option value="2">Normal</option>
@@ -30,7 +34,7 @@
 
       <div class="form-check">
         <label for="tipo" class="form-label">Tipo de problema:</label>
-      </br>
+        <br>
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
         <label class="form-check-label" for="flexCheckDefault">
           Anemia
@@ -47,7 +51,30 @@
         <label class="form-check-label" for="flexCheckChecked">
         Desnutrição
         </label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+           Diabetes
+          </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+             Hipertensão Arterial
+            </label>
       </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+        <label class="form-check-label" for="flexCheckChecked">
+         Intolerância Alimentar
+        </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+           Bulimia
+          </label>
+          </div>
 
     <input type = "date" name="data" required/>
     <input type="submit" name="Enviar"/>
