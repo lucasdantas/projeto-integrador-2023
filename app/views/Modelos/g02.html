@@ -29,20 +29,23 @@
   </div>
 
   <div class="col-md-6">
-    <label for="inputtipo" class="form-label">Tipo</label>
-    <input type="select" name="tipo" class="form-control" id="inputtipo">
-    <option selected>Selecione...</option>
-      <option>projeto integrador</option>
+    <select class="form-select" id="floatingSelect" name="tipo" aria-label="Floating label select example">
+      <option selected>Selecione</option>
+      <option value="1">PI</option>
+      <option value="2">BD</option>
+      <option value="3">AW</option>
+    </select>
   </div>
 
   <div class="col-md-4">
-    <label for="inputopcoes" class="form-label">Opções</label>
-    <select id="inputopcoes" name="opcoes" class="checkbox">
-      <option selected>Selecione...</option>
-      <option>projeto integrador</option>
-      <option>matemática</option>
-      <option>português</option>
-    </select>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="opcoes" id="inlineRadio1" value="opcao1">
+      <label class="form-check-label" for="inlineRadio1">1</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="opcoes" id="inlineRadio2" value="opcao2">
+      <label class="form-check-label" for="inlineRadio2">2</label>
+    </div>
   </div>
   
   <div class="col-12">
