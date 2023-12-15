@@ -28,8 +28,8 @@ public class Modelo extends Model {
 	@ElementCollection
 	public List<String> opcoes;
 
-	@Temporal(TemporalType.DATE)
-	public Date data;
+	//@Temporal(TemporalType.DATE)
+	public String data;
 
 	@Temporal(TemporalType.DATE)
 	public Date cadastradoEm;
