@@ -5,7 +5,6 @@
 	Formulário do grupo ${grupo}
 </p>
 
-
 <p>
 	<small>Desenvolva aqui o seu formulário de cadastro.</small>
 </p>
@@ -13,29 +12,25 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
 <form action="/salvar">
-
-</form>
-
-<form>
 	<input type="hidden" name="grupo" value=${grupo} />
 
 	<h4>Grupo 5: Evelyn, Janiele, Mirele, Pedro e  Sofia</h4>
 
 	<div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" id="nome" placeholder="Informe o nome do animal">
+        <input type="text" class="form-control" name="nome" placeholder="Informe o nome do animal">
       </div>
       <div class="form-group">
         <label for="descricao">Descrição</label>
-        <textarea class="form-control" id="descricao" rows="3" placeholder="Informe a Descrição do animal"></textarea>
+        <textarea class="form-control" name="descricao" rows="3" placeholder="Informe a Descrição do animal"></textarea>
       </div>
       <div class="form-group">
         <label for="numero">Número</label>
-        <input type="number" class="form-control" id="numero">
+        <input type="number" class="form-control" number="numero">
       </div>
       <div class="form-group">
         <label for="tipo">Tipo</label>
-        <select class="form-control" id="tipo">
+        <select class="form-control" name="tipo">
           <option>Magro</option>
           <option>Normal</option>
           <option>Sobrepeso</option>
@@ -45,25 +40,25 @@
       <div class="form-group">
         <label>Opções</label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="opcao1" value="Alergia">
+          <input class="form-check-input" type="checkbox" name="opcao1" value="Alergia">
           <label class="form-check-label" for="opcao1">
             Alergia
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="opcao2" value="Problema cardíaco">
+          <input class="form-check-input" type="checkbox" name="opcao2" value="Problema cardíaco">
           <label class="form-check-label" for="opcao2">
             Problema cardíaco
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="opcao3" value="Problema respiratório">
+          <input class="form-check-input" type="checkbox" name="opcao3" value="Problema respiratório">
           <label class="form-check-label" for="opcao3">
             Problema respiratório
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="opcao4" value="Alopecia">
+          <input class="form-check-input" type="checkbox" name="opcao4" value="Alopecia">
           <label class="form-check-label" for="opcao4">
             Alopecia
           </label>
@@ -71,7 +66,7 @@
       </div>
       <div class="form-group">
         <label for="data">Data</label>
-        <input type="date" class="form-control" id="data">
+        <input type="date" class="form-control" name="data">
       </div>
       <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
