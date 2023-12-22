@@ -1,36 +1,104 @@
 #{extends 'main.html' /}
 #{set title:'Formulário de Cadastro' /}
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
 <p class="lead mt-4">
-	Formulário do grupo g09
+    Formulário do grupo g09
 </p>
 
 
 <p>
-	<small>Desenvolva aqui o seu formulário de cadastro.</small>
+    <small>Desenvolva aqui o seu formulário de cadastro.</small>
 </p>
 
 <form action="/salvar">
-	<input type="hidden" name="grupo" value=${grupo} />
-	<h3>Cadastre-se</h3>
+    <input type="hidden" name="grupo" value=${grupo} />
+    <h3>Cadastre-se</h3>
 
-	<!--modificação g09-->
+    <!--modificação g09-->
 
-    <label>Nome:</label>    
-    <input type="text" name="nome" required/>
-    
-    <label>E-mail:</label>
-    <input type="email" name="descricao" required />
 
-    <label>Senha:</label>
-    <input type="password" name="numero" required/>
 
-    <label for="sexo">Sexo:</label>
-    <select id="sexo" name="tipo" required>
-        <option value="masculino">Masculino</option>
-        <option value="feminino">Feminino</option>
-        <option value="outro">Outro</option>
-    </select>
+    <div class="form-row align-items-center">
+        <div class="col-auto">
+            <label class="sr-only" for="inlineFormInput">Nome</label>
+            <input type="nome" name="nome" class="form-control mb-2" id="inlineFormInput" placeholder="Nome">
 
-    <input type="submit" />
+            <label class="sr-only" for="inlineFormInputGroupUsername2">Usuário</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">@</div>
+                </div>
+                <input type="text" class="form-control" name="descricao" id="inlineFormInputGroupUsername2"
+                    placeholder="Usuário">
+            </div>
+
+
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="inputPassword6">Senha</label>
+                    <input type="password" name="numero" id="inputPassword6" class="form-control mx-sm-3"
+                        aria-describedby="passwordHelpInline">
+                    <small id="passwordHelpInline" class="text-muted">
+                        Deve ter entre 8 e 20 caracteres.
+                    </small>
+                </div>
+            </form>
+
+
+            <label for="sexo">Sexo:</label>
+            <select type="tipo" id="sexo" name="tipo" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select> </br>
+
+
+            <!--mudar as opções-->
+            <label>Quais redes sociais você usa?</label>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="opcoes" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Instagram</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="opcoes" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">twitter</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="opcoes" class="custom-control-input" id="customCheck3">
+                <label class="custom-control-label" for="customCheck3">Facebook</label>
+              </div> <br/>
+
+            <input class="btn btn-dark" type="submit" value="Enviar">
+
+
 </form>

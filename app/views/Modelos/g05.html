@@ -5,82 +5,71 @@
 	Formulário do grupo ${grupo}
 </p>
 
-
 <p>
 	<small>Desenvolva aqui o seu formulário de cadastro.</small>
 </p>
 
-<form>
-	<input type="hidden" name="grupo" value=${grupo} />
-</form>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-<script>
-    function imprimirDados() {
-      var nome = document.getElementById("nome").value;
-      var email = document.getElementById("email").value;
-      var numero = document.getElementById("numero").value;
-      var dataNascimento = document.getElementById("dataNascimento").value;
-	  var grupo = document.getElementById("grupo").value;
-	  var descricao = document.getElementById("descricao").value;
-	  var tipo = document.getElementById("tipo").value;
-      var genero = document.querySelector('input[name="genero"]:checked').value;
-
-      var dados = "Seus dados foram cadastrados." + "\nNome: " + nome + "\nNúmero: " + numero + "\nEmail: " + email + "\nData de Nascimento: " + dataNascimento + "\nGênero: " + genero + "\nGrupo: " grupo + "\nDescricao: " descricao + "\nTipo: " tipo;
-
-      alert(dados);
-    }
-  </script>
-
-  <h1>Cadastro</h1>
-
-  <form action="/salvar">
+<form action="/salvar">
 	<input type="hidden" name="grupo" value=${grupo} />
 
-	<p>
-		<label for="grupo">Grupo:</label>
-		<input type="text" name="grupo" id="grupo"/>
-	</p>
+	<h4>Grupo 5: Evelyn, Janiele, Mirele, Pedro e  Sofia</h4>
 
-	<p>
-		<label for="nome">Nome:</label>
-		<input type="text" name="nome" id="nome"/>
-	</p>
-
-	<p>
-		<label for="descricao">Descricao de curso:</label>
-		<input type="text" name="descricao" id="descricao"/>
-	</p>
-
-	<p>
-		<label for="numero">Número:</label>
-		<input type="text" name="numero" id="numero"/>
-	</p>
-
-	<p>
-		<label for="tipo">Tipo sanguíneo:</label>
-		<input type="text" name="tipo" id="tipo"/>
-	</p>
-
-	<p>
-		<label for="email">Email:</label>
-		<input type="email" name="email" id="email"/>
-	</p>
-
-	<p>
-		<label for="genero">Opções de gênero:</label>
-		<select name="genero" id="sexo">
-			<option>Homem</option>
-			<option>Mulher</option>
-			<option>Outro</option>
-		</select>
-	</p>
-
-	<p>
-		<label for="">Selecione suaa data de nascimento:</label>
-		<input type="date" name="data" id="data"required/> 
-	</p>
-
-	<input type="submit" value="Enviar">
+	<div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="Informe o nome do animal">
+      </div>
+      <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <textarea class="form-control" id="descricao" rows="3" placeholder="Informe a Descrição do animal"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="numero">Número</label>
+        <input type="number" class="form-control" id="numero">
+      </div>
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <select class="form-control" id="tipo">
+          <option>Magro</option>
+          <option>Normal</option>
+          <option>Sobrepeso</option>
+          <option>Obeso</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Opções</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opcao1" value="Alergia">
+          <label class="form-check-label" for="opcao1">
+            Alergia
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opcao2" value="Problema cardíaco">
+          <label class="form-check-label" for="opcao2">
+            Problema cardíaco
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opcao3" value="Problema respiratório">
+          <label class="form-check-label" for="opcao3">
+            Problema respiratório
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opcao4" value="Alopecia">
+          <label class="form-check-label" for="opcao4">
+            Alopecia
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="data">Data</label>
+        <input type="date" class="form-control" id="data">
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
-
-
+  </div>
+</body>
+</html>
