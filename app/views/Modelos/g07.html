@@ -1,0 +1,60 @@
+
+#{extends 'main.html' /}
+#{set title:'Formulário de Cadastro' /}
+
+<p class="lead mt-4">
+	Formulário do grupo ${g07}
+</p>
+
+
+<p>
+	<small>Desenvolva aqui o seu formulário de cadastro.</small>
+</p>
+
+<h1>Registro de aula</h1>
+<form action="/salvar">
+	<input type="hidden" name="grupo" value=${grupo} />
+    <div class="mb-3"> 
+        <label for="nome">Nome da disciplina:</label>
+        <input type="text" class="form-control" id="nome" name="nome">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label for="descricao">Descrição da aula:</label><br>
+        <textarea class="form-control" id="descricao" rows="3" name="descricao"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Quantidade de aulas:</label> 
+        <input class="form-control" type="number" id="numero" value="0">
+    </div>
+    <br>
+    <label>Material Usado em Aula:</label><br>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="opcoes">
+        <label class="form-check-label">Slides</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="opcoes">
+        <label class="form-check-label">Kahoot</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="opcoes">
+        <label class="form-check-label">Lista de Exercicios</label>
+    </div>
+    <br>
+    <div>
+        <label for="turma">Turma:</label>
+        <select id="turma" name="tipo" required>
+            <option value="info1">Info 1</option>
+            <option value="info2">Info 2</option>
+            <option value="info3">Info 3</option>
+            <option value="info4">Info 4</option>
+        </select><br><br>
+    </div>
+    <br>
+    <div>
+     <input type="submit" >
+     <input type="reset" value="limpar">
+    </div>
+</form>
