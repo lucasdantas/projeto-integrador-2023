@@ -5,31 +5,18 @@
 	Formulário do grupo ${grupo}
 </p>
 
-
 <p>
 	<small>Desenvolva aqui o seu formulário de cadastro.</small>
 </p>
 
-<form>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<form action="/salvar">
 	<input type="hidden" name="grupo" value=${grupo} />
-</form>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <form action="/salvar">
-  <title>Cadastro Veterinário</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-</head>
-<body>
+	<h4>Grupo 5: Evelyn, Janiele, Mirele, Pedro e  Sofia</h4>
 
-  <div class="container">
-
-    <h4>Grupo 5: Evelyn, Janiele, Mirele, Pedro e  Sofia</h4>
-
-    <h1>Cadastro Veterinário</h1>
-    <form>
-      <div class="form-group">
+	<div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" class="form-control" id="nome" placeholder="Informe o nome do animal">
       </div>
@@ -82,7 +69,7 @@
         <input type="date" class="form-control" id="data">
       </div>
       <button type="submit" class="btn btn-primary">Cadastrar</button>
-    </form>
+</form>
   </div>
 </body>
 </html>
