@@ -14,86 +14,75 @@
 	<input type="hidden" name="grupo" value=${grupo} />
 </form>
 
-<!-- <script>
-    function imprimirDados() {
-      var nome = document.getElementById("nome").value;
-      var numero = document.getElementById("numero").value;
-      var dataNascimento = document.getElementById("dataNascimento").value;
-	  var grupo = document.getElementById("grupo").value;
-	  var descricao = document.getElementById("descricao").value;
-	  var tipo = document.querySelector('input[name="sangue"]:checked').value;
-      var genero = document.querySelector('input[name="genero"]:checked').value;
-
-      var dados = "Seus dados foram cadastrados." + "\nNome: " + nome + "\nNúmero: " + numero + "\nData de Nascimento: " + dataNascimento + "\nGênero: " + genero + "\nGrupo: " + grupo + "\nDescricao: "+ descricao + "\nTipo: "+ tipo;
-
-      alert(dados);
-    }
-  </script> -->
-
-  <h1>Cadastro</h1>
-
+<!DOCTYPE html>
+<html>
+<head>
   <form action="/salvar">
-	<input type="hidden" name="grupo" value=${grupo} />
+  <title>Cadastro Veterinário</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
 
-	<p>
-		<label for="nome">Nome:</label>
-		<input type="text" name="nome" id="nome"/>
-	</p>
+  <div class="container">
 
-	<p>
-		<label for="descricao">Descricao de curso:</label>
-		<input type="text" name="descricao" id="descricao"/>
-	</p>
+    <h4>Grupo 5: Evelyn, Janiele, Mirele, Pedro e  Sofia</h4>
 
-	<p>
-		<label for="numero">Número:</label>
-		<input type="number" name="numero" id="numero"/>
-	</p>
-
-	<p>
-		<label for="tipo">Tipo sanguíneo:</label>
-		<select name="tipo" id="sangue">
-			<option>A</option>
-			<option>B</option>
-			<option>AB</option>
-			<option>O</option>
-		</select>
-	</p>
-
-	<p>
-		<label for="opcao">Opções de gênero:</label>
-		<input type="checkbox" id="opcao" autocomplete="off">
-        <label for="opcao">--Selecionar--</label>
-
-		<input type="checkbox" id="opcao" autocomplete="off">
-        <label for="opcao">Homem</label>
-
-        <input type="checkbox" id="opcao" autocomplete="off">
-		<label for="opcao">Mulher</label>
-
-        <input type="checkbox" id="opcao" autocomplete="off">
-        <label for="opcao">Outro</label>	
-	</p>
-
-	<p>
-		<label for="">Selecione suaa data de nascimento:</label>
-		<input type="date" name="data" id="data"required/> 
-	</p>
-
-	<input type="submit" value="Enviar">
-</form>
-
-<!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-
-
- -->
+    <h1>Cadastro Veterinário</h1>
+    <form>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="Informe o nome do animal">
+      </div>
+      <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <textarea class="form-control" id="descricao" rows="3" placeholder="Informe a Descrição do animal"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="numero">Número</label>
+        <input type="number" class="form-control" id="numero">
+      </div>
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <select class="form-control" id="tipo">
+          <option>Magro</option>
+          <option>Normal</option>
+          <option>Sobrepeso</option>
+          <option>Obeso</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Opções</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opcao1" value="Alergia">
+          <label class="form-check-label" for="opcao1">
+            Alergia
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opcao2" value="Problema cardíaco">
+          <label class="form-check-label" for="opcao2">
+            Problema cardíaco
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opcao3" value="Problema respiratório">
+          <label class="form-check-label" for="opcao3">
+            Problema respiratório
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opcao4" value="Alopecia">
+          <label class="form-check-label" for="opcao4">
+            Alopecia
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="data">Data</label>
+        <input type="date" class="form-control" id="data">
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+  </div>
+</body>
+</html>

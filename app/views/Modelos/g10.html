@@ -28,33 +28,33 @@
     <form action="/salvar" class="row g-3">
         <input type="hidden" name="grupo" value=${grupo} />
 
-        <div class="col-md-6">
+        <div class="mb-3">
             <label for="inputnome" class="form-label">Nome Completo</label>
             <input type="text" name="nome" class="form-control" id="inputnome">
         </div>
 <br> </br>
-        <div class="col-md-6">
+        <div class="mb-3">
             <label for="inputendereço" class="form-label">Endereço</label>
-            <input type="text" name="tipo" id="inputendereço" placeholder="Rua, bairro, cep">
+            <input type="text" name="descricao" id="inputendereço" placeholder="Rua, bairro, cep">
         </div>
 
         <br> </br>
 
-        <div class="col-12">
+        <div class="mb-3">
             <label for="inputMatricula" class="form-label">Matricula</label>
             <input type="number" name="numero" id="Numtext" class="form-control">
         </div>
 
         <br> </br>
-        <div class="col-md-6">
+        <div class="mb-3">
             <label for="inputemail" class="form-label">Email</label>
-            <input type="text" name="descricao" id="inputemail">
+            <input type="text" name="descricao" id="inputemail" class="form-control">
         </div>
         <br> </br>
 
-        <div class="col-md-4">
+        <div class="mb-3">
             <label for="inputState" class="form-label">Raça</label>
-            <select id="inputState" class="form-select" name="opcoes">
+            <select id="inputState" class="form-select" name="opcoes" class="form-control">
                 <option select>--SELECIONE--</option>
                 <option>Preto</option>
                 <option>Pardo</option>
@@ -64,7 +64,7 @@
         </div>
         <br> </br>
 
-      <div class="col-12">
+      <div class="mb-3">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck">
                 <label class="form-check-label" for="gridCheck">
@@ -72,7 +72,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-12">
+        <div class="mb-3">
             <button type="submit" class="btn btn-primary">Entrar</button>
         </div>
     </form>
